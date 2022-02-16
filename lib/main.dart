@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'OpenSans',
           textTheme: ThemeData.light().textTheme.copyWith(
               // ignore: deprecated_member_use
-              title: TextStyle(
+              subtitle1: TextStyle(
                 fontFamily: 'Quicksand',
                 fontWeight: FontWeight.bold,
                 fontSize: 15,
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             textTheme: ThemeData.light().textTheme.copyWith(
                   // ignore: deprecated_member_use
-                  title: TextStyle(
+                  subtitle1: TextStyle(
                     fontFamily: 'OpenSans',
                     fontWeight: FontWeight.bold,
                     fontSize: 16,

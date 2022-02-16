@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:sharedpreference/sharedpreference.dart';
 
 import 'models/transaction.dart';
 
@@ -10,17 +9,7 @@ class TransactionList extends StatelessWidget {
 
   TransactionList(this.transactions, this.deleteTx);
 
-  String displayName = "";
   @override
-  void initState() {
-    getData();
-  }
-
-  getData() async {
-    SharedPreference prefs = await SharedPreference.getInstance();
-    setState(() {});
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,7 +21,7 @@ class TransactionList extends StatelessWidget {
                   child: Text(
                     'Not a Transaction added yet!',
                     // ignore: deprecated_member_use
-                    style: Theme.of(context).textTheme.title,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
                 SizedBox(
@@ -68,7 +57,7 @@ class TransactionList extends StatelessWidget {
                       title: Text(
                         transactions[index].title,
                         // ignore: deprecated_member_use
-                        style: Theme.of(context).textTheme.title,
+                        style: Theme.of(context).textTheme.subtitle1,
                       ),
                       subtitle: Text(
                         DateFormat.yMMMd().format(transactions[index].date),
