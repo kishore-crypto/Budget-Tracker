@@ -9,20 +9,18 @@ class TransactionList extends StatelessWidget {
   final Function deleteTx;
 
   TransactionList(this.transactions, this.deleteTx);
-  
+
   String displayName = "";
-  @override 
+  @override
   void initState() {
     getData();
-    
   }
+
   getData() async {
     SharedPreference prefs = await SharedPreference.getInstance();
-    setState((){
-
-    }
-    );
+    setState(() {});
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -67,11 +65,9 @@ class TransactionList extends StatelessWidget {
                               child: Text('\₹${transactions[index].amount}')),
                         ),
                       ),
-                      title: Text(
-                        transactions[index].title,
-                        // ignore: deprecated_member_use
-                        style: Theme.of(context).textTheme.title,
-                      ),
+                      title: Text(transactions[index].title,
+                          // ignore: deprecated_member_use
+                          style: Theme.of(context).textTheme.title),
                       subtitle: Text(
                         DateFormat.yMMMd().format(transactions[index].date),
                       ),
