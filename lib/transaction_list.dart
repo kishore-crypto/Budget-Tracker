@@ -65,9 +65,11 @@ class TransactionList extends StatelessWidget {
                               child: Text('\₹${transactions[index].amount}')),
                         ),
                       ),
-                      title: Text(transactions[index].title,
-                          // ignore: deprecated_member_use
-                          style: Theme.of(context).textTheme.title),
+                      title: Text(
+                        transactions[index].title,
+                        // ignore: deprecated_member_use
+                        style: Theme.of(context).textTheme.title,
+                      ),
                       subtitle: Text(
                         DateFormat.yMMMd().format(transactions[index].date),
                       ),
